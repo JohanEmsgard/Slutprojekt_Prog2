@@ -4,6 +4,8 @@ Raylib.InitWindow(1200,1000,"Game");
 Raylib.SetTargetFPS(60);
 
 
+Texture2D background = Raylib.LoadTexture("GreenHillZone.png");
+
 while(!Raylib.WindowShouldClose())
 {
     
