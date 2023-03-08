@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JNpiNM6MrORQT5I3S1BhD0txr8MiZvv7NwHpZ719a+bEIac5RsOD9I6GhpMYmdpBfNRquOYHMBAohPc/4uIthw==",
+  "dgSpecHash": "4E24B3BsK5ZUpKO+Lz8Zi8iK5UvRt86rNGXfuFvGtjj4M63UgkdUD8fs3+YeoLj/mG2BB8rjMnG74pmFpRNqjw==",
   "success": true,
   "projectFilePath": "c:\\Users\\emsgard.johan\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\emsgard.johan\\.nuget\\packages\\raylib-cs\\4.2.0.2\\raylib-cs.4.2.0.2.nupkg.sha512",
+    "C:\\Users\\emsgard.johan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
