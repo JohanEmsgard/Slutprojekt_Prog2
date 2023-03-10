@@ -8,7 +8,10 @@ Texture2D background = Raylib.LoadTexture("GreenHillZone.png");
 
 while(!Raylib.WindowShouldClose())
 {
-    
+    //Grafik
+    Raylib.BeginDrawing();
+    Raylib.ClearBackground(Color.WHITE);
+    Raylib.DrawTexture(background, 0,0, Color.WHITE);
 
 
     Raylib.EndDrawing();
