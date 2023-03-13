@@ -4,7 +4,7 @@ public class Sonic
 {
     //postion 
     private Rectangle rect;
-    private Texture2D sprite;
+    protected Texture2D sprite;
     
     public float speed = 5f;
 
