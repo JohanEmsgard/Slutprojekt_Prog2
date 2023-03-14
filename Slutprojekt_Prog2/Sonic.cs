@@ -42,6 +42,7 @@ public class Sonic
         
 
         if (rect.y < 510)
+    
         {
             rect.y += gravity;
             gravity += ac;            
