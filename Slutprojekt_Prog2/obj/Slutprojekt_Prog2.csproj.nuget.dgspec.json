@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emsgard.johan\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj": {}
+    "C:\\Users\\emsgard.johan\\Documents\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emsgard.johan\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj": {
+    "C:\\Users\\emsgard.johan\\Documents\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emsgard.johan\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj",
+        "projectUniqueName": "C:\\Users\\emsgard.johan\\Documents\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj",
         "projectName": "Slutprojekt_Prog2",
-        "projectPath": "C:\\Users\\emsgard.johan\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj",
+        "projectPath": "C:\\Users\\emsgard.johan\\Documents\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\Slutprojekt_Prog2.csproj",
         "packagesPath": "C:\\Users\\emsgard.johan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emsgard.johan\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\obj\\",
+        "outputPath": "C:\\Users\\emsgard.johan\\Documents\\Programering 2\\Slutprojekt_Prog2\\Slutprojekt_Prog2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
