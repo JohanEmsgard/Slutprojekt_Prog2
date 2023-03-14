@@ -39,18 +39,16 @@ public class Sonic
         }
 
         
-        //if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
-        //{
-            //rect.y += speed;
-        //}
+        
 
-        if (rect.y < 600)
+        if (rect.y < 510)
         {
             rect.y += gravity;
             gravity += ac;            
             
         }
-        else{
+        else
+        {
             jump = false;
             gravity = 0;
 
