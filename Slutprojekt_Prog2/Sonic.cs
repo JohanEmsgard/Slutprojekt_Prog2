@@ -8,9 +8,9 @@ public class Sonic
     
     public float speed = 5f;
 
-    public float gravity = 0;
+    public float gravity;
     public float ac = 0.2f;
-    public float jump = -5;
+    public bool jump = false;
 
     public Sonic()
     {
@@ -31,28 +31,30 @@ public class Sonic
             rect.x -= speed;
         }
 
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && !jump)
         {
+            gravity = -8;
             rect.y -= speed;
+            jump = true;
         }
 
         
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
-        {
-            rect.y += speed;
-        }
+        //if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
+        //{
+            //rect.y += speed;
+        //}
 
         if (rect.y < 600)
         {
             rect.y += gravity;
-            gravity += ac;
+            gravity += ac;            
+            
         }
-
-        if (rect.y == 100)
-        {
+        else{
+            jump = false;
             gravity = 0;
-        }
 
+        }
 
     }
 
