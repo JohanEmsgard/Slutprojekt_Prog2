@@ -20,6 +20,10 @@ public class Sonic
     //Metod
     public void Update()
     {
+
+        Raylib.DrawText("Left and Right to move",100,100,30,Color.BLACK);
+        Raylib.DrawText("Space to jump",100,200,30,Color.BLACK);
+
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             rect.x += speed;
