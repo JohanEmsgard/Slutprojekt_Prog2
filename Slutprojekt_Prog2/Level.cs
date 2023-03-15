@@ -5,13 +5,17 @@ public class Level
     Random Generator = new Random();
     List<Rectangle> platforms = new List<Rectangle>();
 
-    //rect.Add(new Rectangle(100, 100, 100, 100));
+    public Level()
+    {
+        platforms.Add(new Rectangle(100, 100, 100, 100));
 
-    int [,] level = new int[5,8];
+    }
+
+    int[,] level = new int[5, 8];
 
     public void openlevel()
     {
-        level = new int[5,8]{
+        level = new int[5, 8]{
             {0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0},
@@ -19,7 +23,7 @@ public class Level
             {0,0,0,0,0,0,0,0},
         };
 
-        
+
     }
 
 
