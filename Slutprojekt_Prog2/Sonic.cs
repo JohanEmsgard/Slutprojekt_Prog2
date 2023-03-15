@@ -7,7 +7,6 @@ public class Sonic
     protected Texture2D sprite;
     
     public float speed = 5f;
-
     public float gravity;
     public float ac = 0.2f;
     public bool jump = false;
@@ -31,6 +30,7 @@ public class Sonic
             rect.x -= speed;
         }
 
+        //Så Sonic ska bara kunna hoppa en gång
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && !jump)
         {
             gravity = -8;
@@ -38,9 +38,8 @@ public class Sonic
             jump = true;
         }
 
-        
-        
 
+        //Så min character inte faller igenom
         if (rect.y < 510)
     
         {
@@ -48,6 +47,8 @@ public class Sonic
             gravity += ac;            
             
         }
+        
+        //Gravity så sonic faller och kan inte hoppa i luften
         else
         {
             jump = false;
