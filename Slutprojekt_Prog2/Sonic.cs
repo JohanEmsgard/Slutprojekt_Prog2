@@ -21,8 +21,8 @@ public class Sonic
     public void Update()
     {
 
-        Raylib.DrawText("Left and Right to move",100,100,30,Color.BLACK);
-        Raylib.DrawText("Space to jump",100,200,30,Color.BLACK);
+        Raylib.DrawText("Left and Right to move",40,100,30,Color.BLACK);
+        Raylib.DrawText("Space to jump",40,150,30,Color.BLACK);
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
@@ -48,7 +48,8 @@ public class Sonic
     
         {
             rect.y += gravity;
-            gravity += ac;            
+            gravity += ac;      
+            jump = true;      
             
         }
         
