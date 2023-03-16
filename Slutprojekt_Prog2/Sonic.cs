@@ -34,6 +34,11 @@ public class Sonic
             rect.x -= speed;
         }
 
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
+        {
+            sprite = Raylib.LoadTexture("./spindash.png");
+        }
+
         //Så Sonic ska bara kunna hoppa en gång
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && !jump)
         {

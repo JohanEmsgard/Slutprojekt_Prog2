@@ -9,6 +9,10 @@ public class Level
     {
         platforms.Add(new Rectangle(100, 100, 100, 100));
 
+    foreach (Rectangle platform in platforms)
+    {
+        Raylib.DrawRectangleRec(platform, Color.BROWN);
+    }
     }
 
     int[,] level = new int[5, 8];
@@ -18,10 +22,12 @@ public class Level
         level = new int[5, 8]{
             {0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0},
+            {1,1,1,1,1,1,1,1},
             {0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0},
         };
+
+        
 
 
     }
