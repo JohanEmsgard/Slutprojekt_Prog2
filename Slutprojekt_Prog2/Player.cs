@@ -3,22 +3,34 @@ using System;
 public class Sonic
 {
     //postion 
-    private Rectangle rect;
+    //private Rectangle rect;
     protected Texture2D sprite;
 
-    protected Texture2D run = Raylib.LoadTexture("./sonicrun.png");
-    private Texture2D spinSprite = Raylib.LoadTexture("./spindash.png");
+    //protected Texture2D run = Raylib.LoadTexture("./sonicrun.png");
+    //private Texture2D spinSprite = Raylib.LoadTexture("./spindash.png");
     
     public float speed = 5f;
     public float gravity;
     public float ac = 0.2f;
     public bool jump = false;
 
-    public Sonic()
+    public Vector2 position = new Vector2();
+
+    public Player()
     {
-        sprite = Raylib.LoadTexture("./Sonic.png");
-        rect = new Rectangle(0,0,sprite.width, sprite.height);
+        currentform = SonicForm;
     }
+
+    Form currentform;
+    Form SonicForm = new Sonic();
+    Form SuperForm = new Super();
+
+    public void Draw()
+    {
+        currentform.Draw();
+    }
+
+
 
     //Metod
     public void Update()
@@ -29,13 +41,12 @@ public class Sonic
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
-            rect.x += speed;
-            sprite = run;
+            postion.X += speed;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
-            rect.x -= speed;
+            position.X -= speed;
         }
 
 
@@ -49,13 +60,13 @@ public class Sonic
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && !jump)
         {
             gravity = -8;
-            rect.y -= speed;
+            position.Y -= speed;
             jump = true;
         }
 
 
         //Så min character inte faller igenom
-        if (rect.y < 510)
+        if (position.Y < 510)
     
         {
             rect.y += gravity;
@@ -72,11 +83,11 @@ public class Sonic
 
         }
 
+
+
+        currentform.Update(position);
+
     }
 
-    //Logik
-    public void Draw()
-    {
-        Raylib.DrawTexture(sprite, (int) rect.x, (int)rect.y,Color.WHITE);
-    }
+    
 }
