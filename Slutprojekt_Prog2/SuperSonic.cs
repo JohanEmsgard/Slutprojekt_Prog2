@@ -1,6 +1,6 @@
 using System;
 
-public class SuperSonic
+public class SuperSonic : Form
 {
     public SuperSonic()
     {
