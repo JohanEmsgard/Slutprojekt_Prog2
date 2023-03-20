@@ -1,8 +1,6 @@
-using System;
+using System.Numerics;
 
 public class Form
-{
-    public class Form
 {
     private Rectangle rect;
     protected Texture2D sprite;
@@ -22,7 +20,5 @@ public class Form
     {
         Raylib.DrawTexture(sprite, (int)rect.x, (int)rect.y, Color.WHITE);
     }
-
-
 }
-}
+
