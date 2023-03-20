@@ -7,7 +7,7 @@ public class Player
     protected Texture2D sprite;
 
     //protected Texture2D run = Raylib.LoadTexture("./sonicrun.png");
-    //private Texture2D spinSprite = Raylib.LoadTexture("./spindash.png");
+    //protected Texture2D spinSprite = Raylib.LoadTexture("./spindash.png");
     
     public float speed = 5f;
     public float gravity;
@@ -97,6 +97,12 @@ public class Player
             isSuper = true;
             currentform = SupersonicForm;
         }
+
+        if (currentform = SupersonicForm)
+        {
+            Rings -=1;
+        }
+
 
         if (Rings <=50 && isSuper)
         {
