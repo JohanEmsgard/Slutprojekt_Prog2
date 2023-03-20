@@ -1,6 +1,6 @@
-using System;
+using System.Numerics;
 
-public class Sonic
+public class Player
 {
     //postion 
     //private Rectangle rect;
@@ -13,6 +13,7 @@ public class Sonic
     public float gravity;
     public float ac = 0.2f;
     public bool jump = false;
+    public int Rings { get; set; } = 0;
 
     public Vector2 position = new Vector2();
 
@@ -41,7 +42,7 @@ public class Sonic
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
-            postion.X += speed;
+            position.X += speed;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
@@ -52,7 +53,7 @@ public class Sonic
 
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
-            sprite = spinSprite;
+            //sprite = spinSprite;
             jump = false;
         }
 
@@ -69,7 +70,7 @@ public class Sonic
         if (position.Y < 510)
     
         {
-            rect.y += gravity;
+            position.Y += gravity;
             gravity += ac;      
             jump = true;      
             
