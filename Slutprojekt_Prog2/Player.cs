@@ -15,7 +15,7 @@ public class Player
     public bool jump = false;
     public int Rings { get; set; } = 0;
 
-    bool isSuper = false;
+    public bool isSuper = false;
 
     public Vector2 position = new Vector2();
 
@@ -26,7 +26,8 @@ public class Player
 
     Form currentform;
     Form SonicForm = new Sonic();
-    Form SuperForm = new Super();
+    Form SupersonicForm = new SuperSonic();
+
 
     public void Draw()
     {
@@ -79,6 +80,7 @@ public class Player
             jump = true;      
             
         }
+
         
         //Gravity så sonic faller och kan inte hoppa i luften
         else
@@ -86,22 +88,24 @@ public class Player
             jump = false;
             gravity = 0;
 
-        }
+        }        
+
 
 
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) &&  Rings >= 50)
         {
             isSuper = true;
-            currentform = SuperForm;
+            currentform = SupersonicForm;
         }
 
-        if (currentform = SuperForm)
+        if (Rings <=50 && isSuper)
         {
-            Rings -=1;
+            currentform = SonicForm;
+            isSuper = false;
         }
 
 
-
+        Console.WriteLine(Rings);
 
         currentform.Update(position);
 
