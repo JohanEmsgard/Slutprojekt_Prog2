@@ -5,6 +5,7 @@ public class Sonic
     //postion 
     private Rectangle rect;
     protected Texture2D sprite;
+    private Texture2D spinSprite = Raylib.LoadTexture("./spindash.png");
     
     public float speed = 5f;
     public float gravity;
@@ -27,6 +28,7 @@ public class Sonic
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             rect.x += speed;
+            sprite = Raylib.LoadTexture("./sonicrun.png");
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
@@ -34,9 +36,11 @@ public class Sonic
             rect.x -= speed;
         }
 
+
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
-            sprite = Raylib.LoadTexture("./spindash.png");
+            sprite = spinSprite;
+            jump = false;
         }
 
         //Så Sonic ska bara kunna hoppa en gång
