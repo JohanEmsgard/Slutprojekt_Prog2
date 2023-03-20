@@ -5,6 +5,8 @@ public class Sonic
     //postion 
     private Rectangle rect;
     protected Texture2D sprite;
+
+    protected Texture2D run = Raylib.LoadTexture("./sonicrun.png");
     private Texture2D spinSprite = Raylib.LoadTexture("./spindash.png");
     
     public float speed = 5f;
@@ -28,7 +30,7 @@ public class Sonic
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             rect.x += speed;
-            sprite = Raylib.LoadTexture("./sonicrun.png");
+            sprite = run;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))

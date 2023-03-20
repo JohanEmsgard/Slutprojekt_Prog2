@@ -3,7 +3,13 @@ using System;
 public class items
 {
     //Raylib.DrawText("Rings",600,1000,50,Color.BLACK);
-    public int Ringcount { get; set; }
+    public int Ringcount { get; set; } = 0;
+
+    public virtual void collect (Sonic target)
+    {
+        Console.WriteLine("Hi");
+
+    }
 
 
 }
