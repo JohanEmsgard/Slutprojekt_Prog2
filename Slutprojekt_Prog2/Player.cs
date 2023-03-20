@@ -15,6 +15,8 @@ public class Player
     public bool jump = false;
     public int Rings { get; set; } = 0;
 
+    bool isSuper = false;
+
     public Vector2 position = new Vector2();
 
     public Player()
@@ -43,11 +45,13 @@ public class Player
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             position.X += speed;
+            Rings +=1;
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
             position.X -= speed;
+            Rings +=1;
         }
 
 
@@ -83,6 +87,19 @@ public class Player
             gravity = 0;
 
         }
+
+
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) &&  Rings >= 50)
+        {
+            isSuper = true;
+            currentform = SuperForm;
+        }
+
+        if (currentform = SuperForm)
+        {
+            Rings -=1;
+        }
+
 
 
 
