@@ -69,6 +69,10 @@ public class Player
         if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
             jump = false;
+            if(currentform is Sonic)
+            {
+                 ((Sonic)currentform).runanddash();
+            }
         }
 
         //Så Sonic ska bara kunna hoppa en gång
