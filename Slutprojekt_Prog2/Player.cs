@@ -119,22 +119,21 @@ public class Player
 
 
 
-        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && Rings >= 50 && transformButtonTimerActive)
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && Raylib.IsKeyPressed(KeyboardKey.KEY_X) && Rings >= 50)
         {
             isSuper = true;
             currentform = SupersonicForm;
         }
 
-        //if (currentform = SupersonicForm)
-        //{
-            //Rings -=1;
-        //}
-
-
-        if (Rings <=50 && isSuper)
+        if (Rings <=0 && isSuper)
         {
             currentform = SonicForm;
             isSuper = false;
+        }
+
+        if (currentform == SupersonicForm)
+        {
+            Rings -=1;
         }
 
 
