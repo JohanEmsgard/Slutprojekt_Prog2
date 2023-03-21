@@ -14,8 +14,10 @@ public class Player
     public float ac = 0.2f;
     public bool jump = false;
     public int Rings { get; set; } = 0;
-
     public bool isSuper = false;
+
+    private int transformButtonTimer = 0;
+    private bool transformButtonTimerActive = false;
 
     public Vector2 position = new Vector2();
 
@@ -58,7 +60,7 @@ public class Player
 
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
-            //sprite = spinSprite;
+
             jump = false;
         }
 
@@ -87,21 +89,35 @@ public class Player
         {
             jump = false;
             gravity = 0;
-
         }        
 
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) &&  Rings >= 50 && transformButtonTimerActive == false)
+        {
+            transformButtonTimerActive = true;
+            transformButtonTimer = 30;
+        }
+
+        if (transformButtonTimerActive)
+        {
+            transformButtonTimer--;
+            if (transformButtonTimer == 0)
+            {
+                transformButtonTimerActive = false;
+            }
+        }
 
 
-        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) &&  Rings >= 50)
+
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && Rings >= 50 && transformButtonTimerActive)
         {
             isSuper = true;
             currentform = SupersonicForm;
         }
 
-        if (currentform = SupersonicForm)
-        {
-            Rings -=1;
-        }
+        //if (currentform = SupersonicForm)
+        //{
+            //Rings -=1;
+        //}
 
 
         if (Rings <=50 && isSuper)
