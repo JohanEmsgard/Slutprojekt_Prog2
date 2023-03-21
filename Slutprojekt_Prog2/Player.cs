@@ -5,10 +5,10 @@ public class Player
     //postion 
     //private Rectangle rect;
     protected Texture2D sprite;
-
+    
     //public Texture2D run = Raylib.LoadTexture("./sonicrun.png");
     //protected Texture2D spinSprite = Raylib.LoadTexture("./spindash.png");
-
+    
     public float speed = 5f;
     public float gravity;
     public float ac = 0.2f;
@@ -42,27 +42,31 @@ public class Player
     public void Update()
     {
 
-        Raylib.DrawText("Left and Right to move", 40, 100, 30, Color.BLACK);
-        Raylib.DrawText("Space to jump", 40, 150, 30, Color.BLACK);
+        Raylib.DrawText("Left and Right to move",40,100,30,Color.BLACK);
+        Raylib.DrawText("Space to jump",40,150,30,Color.BLACK);
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
             position.X += speed;
-            Rings += 1;
-            if (currentform is Sonic)
+            Rings +=1;
+            if(currentform is Sonic)
             {
-                ((Sonic)currentform).runanddash();
+                 ((Sonic)currentform).runanddash();
             }
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
         {
             position.X -= speed;
-            Rings += 1;
+            Rings +=1;
+            if(currentform is Sonic)
+            {
+                 ((Sonic)currentform).runanddash();
+            }
         }
 
 
-        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
             jump = false;
         }
@@ -78,23 +82,23 @@ public class Player
 
         //Så min character inte faller igenom
         if (position.Y < 510)
-
+    
         {
             position.Y += gravity;
-            gravity += ac;
-            jump = true;
-
+            gravity += ac;      
+            jump = true;      
+            
         }
 
-
+        
         //Gravity så sonic faller och kan inte hoppa i luften
         else
         {
             jump = false;
             gravity = 0;
-        }
+        }        
 
-        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && Rings >= 50 && transformButtonTimerActive == false)
+        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) &&  Rings >= 50 && transformButtonTimerActive == false)
         {
             transformButtonTimerActive = true;
             transformButtonTimer = 30;
@@ -119,11 +123,11 @@ public class Player
 
         //if (currentform = SupersonicForm)
         //{
-        //Rings -=1;
+            //Rings -=1;
         //}
 
 
-        if (Rings <= 50 && isSuper)
+        if (Rings <=50 && isSuper)
         {
             currentform = SonicForm;
             isSuper = false;
@@ -136,5 +140,5 @@ public class Player
 
     }
 
-
+    
 }
