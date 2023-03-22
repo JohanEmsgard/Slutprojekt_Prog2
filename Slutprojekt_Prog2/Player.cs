@@ -42,6 +42,7 @@ public class Player
     public void Update()
     {
 
+        ((Sonic)currentform).idle();
         Raylib.DrawText("Left and Right to move",40,100,30,Color.BLACK);
         Raylib.DrawText("Space to jump",40,150,30,Color.BLACK);
 
@@ -53,6 +54,7 @@ public class Player
             {
                  ((Sonic)currentform).runanddash();
             }
+
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
@@ -74,6 +76,12 @@ public class Player
                  ((Sonic)currentform).runanddash();
             }
         }
+
+        
+  
+        
+
+            
 
         //Så Sonic ska bara kunna hoppa en gång
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && !jump)
@@ -99,7 +107,7 @@ public class Player
         else
         {
             jump = false;
-            gravity = 0;
+            gravity = 0.2f;
         }        
 
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) &&  Rings >= 50 && transformButtonTimerActive == false)
@@ -116,8 +124,6 @@ public class Player
                 transformButtonTimerActive = false;
             }
         }
-
-
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && Raylib.IsKeyPressed(KeyboardKey.KEY_X) && Rings >= 50)
         {
