@@ -4,7 +4,12 @@ public class SuperSonic : Form
 {
     public SuperSonic()
     {
-        sprite = Raylib.LoadTexture("SuperSonic.png");
+        Supersprite = Raylib.LoadTexture("SuperSonic.png");
+    }
+
+    public void Transformed()
+    {
+        Supersprite = Raylib.LoadTexture("SuperSonic.png");
     }
     
 }
