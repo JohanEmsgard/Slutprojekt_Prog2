@@ -1,15 +1,16 @@
 using System;
 
-public class SuperSonic : Form
+public class SuperSonic : Sonic
 {
     public SuperSonic()
     {
-        Supersprite = Raylib.LoadTexture("SuperSonic.png");
+        idle = Raylib.LoadTexture("SuperSonic.png");
+        run = Raylib.LoadTexture("SupersonicFly.png");
     }
 
     public void Transformed()
     {
-        Supersprite = Raylib.LoadTexture("SuperSonic.png");
+        // sprite = Raylib.LoadTexture("SuperSonic.png");
     }
     
 }

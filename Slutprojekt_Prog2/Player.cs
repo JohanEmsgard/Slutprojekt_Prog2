@@ -16,9 +16,6 @@ public class Player
     public int Rings { get; set; } = 0;
     public bool isSuper = false;
 
-    private int transformButtonTimer = 0;
-    private bool transformButtonTimerActive = false;
-
     public Vector2 position = new Vector2();
 
     public Player()
@@ -42,7 +39,7 @@ public class Player
     public void Update()
     {
 
-        ((Sonic)currentform).idle();
+        ((Sonic)currentform).Idle();
         Raylib.DrawText("Left and Right to move",40,100,30,Color.BLACK);
         Raylib.DrawText("Space to jump",40,150,30,Color.BLACK);
 
@@ -110,25 +107,11 @@ public class Player
             gravity = 0.2f;
         }        
 
-        if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) &&  Rings >= 50 && transformButtonTimerActive == false)
-        {
-            transformButtonTimerActive = true;
-            transformButtonTimer = 30;
-        }
-
-        if (transformButtonTimerActive)
-        {
-            transformButtonTimer--;
-            if (transformButtonTimer == 0)
-            {
-                transformButtonTimerActive = false;
-            }
-        }
-
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && Raylib.IsKeyPressed(KeyboardKey.KEY_X) && Rings >= 50)
         {
             isSuper = true;
             currentform = SupersonicForm;
+            
         }
 
         if (Rings <=0 && isSuper)
