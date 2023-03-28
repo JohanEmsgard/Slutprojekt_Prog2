@@ -51,7 +51,7 @@ public class Player
             {
                  ((Sonic)currentform).runanddash();
             }
-
+            
         }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
@@ -111,6 +111,7 @@ public class Player
         {
             isSuper = true;
             currentform = SupersonicForm;
+            
             
         }
 
