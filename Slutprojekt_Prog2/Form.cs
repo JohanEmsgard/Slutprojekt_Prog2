@@ -5,8 +5,7 @@ public class Form
     private Rectangle rect;
     protected static Texture2D sprite;
 
-    // protected static Texture2D Supersprite;
-
+   
     public Form()
     {
         sprite = Raylib.LoadTexture("Sonic.png");
