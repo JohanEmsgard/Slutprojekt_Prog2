@@ -50,7 +50,7 @@ public class Player
             Rings +=1;
             if(currentform is Sonic)
             {
-                 ((Sonic)currentform).runanddash();
+                 ((Sonic)currentform).action();
             }
             
         }
@@ -61,7 +61,7 @@ public class Player
             Rings +=1;
             if(currentform is Sonic)
             {
-                 ((Sonic)currentform).runanddash();
+                 ((Sonic)currentform).action();
             }
         }
 
@@ -71,7 +71,7 @@ public class Player
             jump = false;
             if(currentform is Sonic)
             {
-                 ((Sonic)currentform).runanddash();
+                 ((Sonic)currentform).action();
             }
         }
 
@@ -79,7 +79,7 @@ public class Player
         {
             if(currentform is Sonic)
             {
-            ((Sonic)currentform).runanddash();
+            ((Sonic)currentform).action();
             }
         }
 
