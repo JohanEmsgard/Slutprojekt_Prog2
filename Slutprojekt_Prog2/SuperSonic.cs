@@ -9,7 +9,7 @@ public class SuperSonic : Sonic
         run = Raylib.LoadTexture("SupersonicFly.png");
         runLeft = Raylib.LoadTexture("SupersonicFlyLeft.png");
         spinSprite = Raylib.LoadTexture("Supersonicsindash.png");
-        punch = Raylib.LoadTexture("Supersonickick.png");
+        kick = Raylib.LoadTexture("Supersonickick.png");
     }
         
 }

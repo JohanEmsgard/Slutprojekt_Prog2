@@ -83,6 +83,14 @@ public class Player
             }
         }
 
+         if(Raylib.IsKeyDown(KeyboardKey.KEY_X))
+        {
+            if(currentform is Sonic)
+            {
+                 ((Sonic)currentform).runanddash();
+            }
+        }
+
         
   
         
