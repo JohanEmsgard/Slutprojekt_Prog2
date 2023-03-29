@@ -132,6 +132,7 @@ public class Player
             gravity = 0.2f;
         }        
 
+        //Super Sonic functionen
         if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE) && Raylib.IsKeyPressed(KeyboardKey.KEY_X) && Rings >= 50)
         {
             isSuper = true;
@@ -140,19 +141,20 @@ public class Player
             
         }
 
-        if (Rings <=0 && isSuper)
+        //När man är super sonic OCH rings är like med 0 så blir man vanlig Sonic
+        if (Rings ==0 && isSuper)
         {
             currentform = SonicForm;
             isSuper = false;
         }
 
+        //Medans Man är SuperSonic så förlorar man rings 
         if (currentform == SupersonicForm)
         {
             Rings -=1;
         }
 
 
-        Console.WriteLine(Rings);
 
         currentform.Update(position);
 
