@@ -113,6 +113,14 @@ public class Player
             }
         }
 
+         if(Raylib.IsKeyDown(KeyboardKey.KEY_SPACE)&&(Raylib.IsKeyDown(KeyboardKey.KEY_UP)))
+        {
+            if(currentform is Sonic)
+            {
+                 ((Sonic)currentform).runanddash();
+            }
+        }
+
 
         //Så min character inte faller igenom
         if (position.Y < 510)
