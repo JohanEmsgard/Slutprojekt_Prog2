@@ -12,6 +12,7 @@ public class SuperSonic : Sonic
         kick = Raylib.LoadTexture("Supersonickick.png");
         punch = Raylib.LoadTexture("Supersonicpunch.png");
         JumP = Raylib.LoadTexture("Superjump.png");
+        Insta = Raylib.LoadTexture("SuperInsta.png");
     }
         
 }
