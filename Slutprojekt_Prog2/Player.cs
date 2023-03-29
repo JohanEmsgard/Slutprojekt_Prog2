@@ -83,7 +83,7 @@ public class Player
             }
         }
 
-         if(Raylib.IsKeyDown(KeyboardKey.KEY_X))
+         if(Raylib.IsKeyDown(KeyboardKey.KEY_S))
         {
             if(currentform is Sonic)
             {
