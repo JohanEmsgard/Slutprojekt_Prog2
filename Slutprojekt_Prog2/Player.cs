@@ -42,7 +42,7 @@ public class Player
         ((Sonic)currentform).Idle();
         Raylib.DrawText("Left and Right to move",40,100,30,Color.BLACK);
         Raylib.DrawText("Space to jump",40,150,30,Color.BLACK);
-        Raylib.DrawText($"Rings:{Rings}",800,100,30,Color.BLACK);
+        Raylib.DrawText($"Rings:{Rings}",500,100,30,Color.BLACK);
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
         {
@@ -50,7 +50,7 @@ public class Player
             Rings +=1;
             if(currentform is Sonic)
             {
-                 ((Sonic)currentform).action();
+                 ((Sonic)currentform).runanddash();
             }
             
         }
@@ -61,7 +61,7 @@ public class Player
             Rings +=1;
             if(currentform is Sonic)
             {
-                 ((Sonic)currentform).action();
+                 ((Sonic)currentform).runanddash();
             }
         }
 
@@ -71,11 +71,9 @@ public class Player
             jump = false;
             if(currentform is Sonic)
             {
-                 ((Sonic)currentform).action();
+                 ((Sonic)currentform).runanddash();
             }
         }
-
-    
 
         
   
@@ -130,7 +128,7 @@ public class Player
         }
 
 
-        //Console.WriteLine(Rings);
+        Console.WriteLine(Rings);
 
         currentform.Update(position);
 
