@@ -68,7 +68,7 @@ public class Player
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
         {
-            jump = false;
+            //jump = false;
             if(currentform is Sonic)
             {
                  ((Sonic)currentform).runanddash();
