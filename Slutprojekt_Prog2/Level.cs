@@ -7,7 +7,7 @@ public class Level
 
     public Level()
     {
-        platforms.Add(new Rectangle(100, 100, 100, 100));
+        platforms.Add(new Rectangle(100, 100, 500, 500));
 
     foreach (Rectangle platform in platforms)
     {
