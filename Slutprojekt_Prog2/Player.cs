@@ -145,8 +145,6 @@ public class Player
         {
             isSuper = true;
             currentform = SupersonicForm;
-            
-            
         }
 
         //När man är super sonic OCH rings är like med 0 så blir man vanlig Sonic

@@ -5,8 +5,6 @@ Raylib.SetTargetFPS(60);
 
 Player player = new Player(); 
 
-Texture2D background = Raylib.LoadTexture("GreenHillZone.png");
-
 while(!Raylib.WindowShouldClose())
 {
     //logik
@@ -15,8 +13,7 @@ while(!Raylib.WindowShouldClose())
 
     //Grafik
     Raylib.BeginDrawing();
-    Raylib.ClearBackground(Color.BLUE);
-    Raylib.DrawTexture(background, 0,0, Color.WHITE);
+    Raylib.ClearBackground(Color.BLUE); 
     player.Draw();
 
 
