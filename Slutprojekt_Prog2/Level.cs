@@ -7,19 +7,29 @@ public class Level
 
     public Level()
     {
-        platforms.Add(new Rectangle(100, 100, 500, 500));
+        platforms.Add(new Rectangle(900, 500, 100, 100));
 
-    foreach (Rectangle platform in platforms)
+    foreach (Rectangle i in platforms)
     {
-        Raylib.DrawRectangleRec(platform, Color.BROWN);
+        Raylib.DrawRectangleRec(i, Color.BROWN);
     }
+    
     }
 
-    int[,] level = new int[5, 8];
+    public void Newlevel()
+    {
+        foreach (Rectangle i in platforms)
+        {
+            Raylib.DrawRectangleRec(i, Color.BROWN);
+        }
+    
+    }
+
+    int[,] array = new int[5, 8];
 
     public void openlevel()
     {
-        level = new int[5, 8]{
+        array = new int[5, 8]{
             {0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0},
             {1,1,1,1,1,1,1,1},
@@ -27,10 +37,10 @@ public class Level
             {0,0,0,0,0,0,0,0},
         };
 
-        
 
 
     }
+
 
 
 }
