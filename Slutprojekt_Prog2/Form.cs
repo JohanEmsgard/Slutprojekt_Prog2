@@ -11,6 +11,11 @@ public class Form
         sprite = Raylib.LoadTexture("Sonic.png");
     }
 
+    public bool DoesCollideWith(Rectangle otherRect)
+    {
+        return Raylib.CheckCollisionRecs(rect, otherRect);
+    }
+
 
     public void Update(Vector2 pos)
     {

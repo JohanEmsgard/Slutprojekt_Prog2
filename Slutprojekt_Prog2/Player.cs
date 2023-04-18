@@ -21,12 +21,17 @@ public class Player
     public Player()
     {
         currentform = SonicForm;
+        Level l = new();
     }
 
     Form currentform;
     Form SonicForm = new Sonic();
     Form SupersonicForm = new SuperSonic();
 
+    public bool CollidesWithForm(Rectangle otherRect)
+    {
+        return currentform.DoesCollideWith(otherRect);
+    }
 
     public void Draw()
     {
@@ -38,6 +43,8 @@ public class Player
     //Metod
     public void Update()
     {
+        Level l = new();
+        l.Newlevel(this);
 
         ((Sonic)currentform).Idle();
         Raylib.DrawText("Left and Right to move",40,100,30,Color.BLACK);

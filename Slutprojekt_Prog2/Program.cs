@@ -18,7 +18,5 @@ while(!Raylib.WindowShouldClose())
     Raylib.ClearBackground(Color.BLUE); 
     player.Draw();
 
-        l.Newlevel();
-
     Raylib.EndDrawing();
 }
