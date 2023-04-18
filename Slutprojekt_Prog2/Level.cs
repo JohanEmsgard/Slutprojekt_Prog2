@@ -1,10 +1,16 @@
 using System;
+using System.Numerics;
 
 public class Level
 {
     Random Generator = new Random();
     List<Rectangle> platforms = new List<Rectangle>();
 
+    Vector2 Collistion = new Vector2();
+    float movementX = 0;
+    float movementY = 0;
+    bool undoX = true;
+    bool undoY = false;
     public Level()
     {
         platforms.Add(new Rectangle(900, 500, 100, 100));
@@ -16,11 +22,16 @@ public class Level
     
     }
 
-    public void Newlevel()
+    public void Newlevel(Player p)
     {
         foreach (Rectangle i in platforms)
         {
             Raylib.DrawRectangleRec(i, Color.BROWN);
+            if(p.CollidesWithForm(i))
+            {
+                undoX = false;
+                undoY = true;
+            }
         }
     
     }
@@ -40,6 +51,8 @@ public class Level
 
 
     }
+
+    //Level.Newlevel();
 
 
 
